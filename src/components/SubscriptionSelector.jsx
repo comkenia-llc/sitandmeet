@@ -20,6 +20,7 @@ export default function SubscriptionSelector() {
         setActiveOption(option);
     };
 
+
     const handleCheckout = async () => {
         setLoading(true);
         const stripe = await stripePromise;

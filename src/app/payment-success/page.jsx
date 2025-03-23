@@ -5,6 +5,8 @@ import axios from "axios";
 export default function PaymentSuccessPage() {
     const [userDetails, setUserDetails] = useState(null);
     const [loading, setLoading] = useState(true);
+    const [eventExpired, setEventExpired] = useState(false);
+
 
     useEffect(() => {
         const contactInfo = JSON.parse(localStorage.getItem("contactInfo"));
@@ -74,6 +76,13 @@ export default function PaymentSuccessPage() {
                 >
                     Explore More Meetups
                 </button>
+
+                {eventExpired ? (
+                    <p className="text-red-600 mt-4">This meetup has already passed.</p>
+                ) : (
+                    <p className="text-green-600 mt-4">Get ready! Your meetup is coming soon.</p>
+                )}
+
             </div>
         </div>
     );

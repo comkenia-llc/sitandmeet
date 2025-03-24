@@ -57,9 +57,9 @@ export default function PaymentSuccessPage() {
                 <h1 className="text-3xl text-center font-bold text-green-500 mb-4">🎉 Meetup Confirmed!</h1>
                 <p className="text-gray-600 mb-6">Thank you, <span className="font-semibold">{userDetails.name || "Friend"}</span>! Your spot is secured.</p>
 
-                <div className="mb-4 bg-gray-50 rounded-lg shadow-sm p-4 text-left">
-                    <h3 className="font-semibold mb-2">📅 Your Meetup Details:</h3>
-                    <ul className="text-gray-700 space-y-1">
+                <div className="mb-4 bg-white text-black rounded-lg shadow-lg p-4 text-left">
+                    <h3 className="font-semibold mb-2">Your Meetup Details:</h3>
+                    <ul className="space-y-1">
                         <li><b>Intention:</b> {userDetails.intention}</li>
                         <li><b>Vibe With:</b> {userDetails.vibe}</li>
                         <li><b>Emirate:</b> {userDetails.emirate}</li>
@@ -71,17 +71,17 @@ export default function PaymentSuccessPage() {
                 <p className="text-sm text-gray-500 mt-4">You'll receive an email soon with more details about your meetup.</p>
 
                 <button
-                    className="mt-6 bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-xl font-semibold transition duration-200"
+                    className="mt-6 bg-purple-600 cursor-pointer hover:bg-purple-700 text-white px-6 py-2 rounded-xl font-semibold transition duration-200"
                     onClick={() => window.location.href = '/'}
                 >
                     Explore More Meetups
                 </button>
 
-                {eventExpired ? (
+                {/* {eventExpired ? (
                     <p className="text-red-600 mt-4">This meetup has already passed.</p>
                 ) : (
                     <p className="text-green-600 mt-4">Get ready! Your meetup is coming soon.</p>
-                )}
+                )} */}
 
             </div>
         </div>

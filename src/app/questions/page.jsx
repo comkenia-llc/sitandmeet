@@ -4,13 +4,16 @@ import QuestionForm from "@/components/QuestionForm";
 import axios from "axios";
 import SubscriptionSelector from "@/components/SubscriptionSelector";
 import FakeMatchingAnimation from "@/components/MatchMakingAnimation";
+import { AiOutlineArrowLeft, AiOutlineBackward } from "react-icons/ai";
+
 
 const questions = [
     { id: 1, text: "What kind of connection are you looking for?", options: ["Deep Conversation", "Casual Meetup", "Business Networking"] },
     { id: 2, text: "Who do you naturally vibe with?", options: ["Men", "Women", "Both"] },
-    { id: 3, text: "Which Emirate are you in?", options: ["Dubai", "Abu Dhabi", "Sharjah", "Ajman", "Ras al Khaimah", "Fujairah"] },
-    { id: 4, text: "Select your area", options: [] },
+    { id: 3, text: "Which Emirate you want this magic happen?", options: ["Dubai", "Abu Dhabi", "Sharjah", "Ajman", "Ras al Khaimah", "Fujairah"] },
+    { id: 4, text: "Select your desired area", options: [] },
     { id: 5, text: "What’s your ideal meetup spot?", options: ["Café", "Park", "Co-Working Space"] },
+    { id: 6, text: "Which time suits you?", options: ["Morning", "Afternoon", "Evening", "Night"] },
 ];
 
 const areaOptions = {
@@ -214,10 +217,12 @@ export default function QuestionsPage() {
         <div className="min-h-screen flex flex-col items-center justify-center bg-black text-white px-6">
             {step > 0 && step <= questions.length && (
                 <button
-                    className="absolute left-4 top-4 bg-gray-700 hover:bg-gray-600 text-white py-2 px-4 rounded-full transition"
+                    className="absolute left-4 top-4 text-white py-2 px-4 rounded-full transition"
                     onClick={handleBack}
                 >
-                    ← Go Back
+                    <AiOutlineBackward
+                        size={24}
+                    />
                 </button>
             )}
 

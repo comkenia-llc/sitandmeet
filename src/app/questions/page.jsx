@@ -4,11 +4,20 @@ import QuestionForm from "@/components/QuestionForm";
 import axios from "axios";
 import SubscriptionSelector from "@/components/SubscriptionSelector";
 import FakeMatchingAnimation from "@/components/MatchMakingAnimation";
-import { AiOutlineArrowLeft, AiOutlineBackward } from "react-icons/ai";
+import { AiOutlineBackward } from "react-icons/ai";
 
 
 const questions = [
-    { id: 1, text: "What kind of connection are you looking for?", options: ["Deep Conversation", "Casual Meetup", "Business Networking"] },
+    {
+        id: 1, text: "What kind of connection are you looking for?", options:
+            [
+                "Romantic spark",
+                "Casual Meetup",
+                "Business Networking",
+                ""
+            ]
+
+    },
     { id: 2, text: "Who do you naturally vibe with?", options: ["Men", "Women", "Both"] },
     { id: 3, text: "Which Emirate you want this magic happen?", options: ["Dubai", "Abu Dhabi", "Sharjah", "Ajman", "Ras al Khaimah", "Fujairah"] },
     { id: 4, text: "Select your desired area", options: [] },

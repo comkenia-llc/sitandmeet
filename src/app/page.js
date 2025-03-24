@@ -4,22 +4,22 @@ export default function HomePage() {
       {/* Soft glowing background for premium feel */}
       <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[600px] h-[600px] bg-blue-500 blur-[160px] opacity-20 rounded-full z-0" />
 
-      {/* Hero Content */}
-      <div className="z-10 max-w-md">
+      <div className="z-10 w-full max-w-lg">
         <h1 className="text-4xl sm:text-5xl font-extrabold leading-tight mb-4 tracking-tight">
-          The Perfect Meetup is Waiting for You.
+          Real People. Real Meetups. No Bullsh*t.
         </h1>
         <p className="text-lg sm:text-xl text-gray-300 mb-6">
-          No swipes. No randomness. Just real, meaningful conversations.
-          Let our AI find the right people for you
+          We're not another dating app. We're your shortcut to meaningful, spontaneous, face-to-face conversations with people who actually vibe with you.
+        </p>
+        <p className="text-base text-gray-400 mb-8 italic">
+          93% of users say they made a real connection on their very first meetup.
         </p>
 
-        {/* CTA Button */}
         <a
           href="/questions"
-          className="inline-block bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white text-lg font-semibold py-4 px-10 rounded-full shadow-lg transition duration-300 animate-pulse"
+          className="inline-block bg-gradient-to-r from-pink-600 to-purple-500 hover:from-pink-700 hover:to-purple-600 text-white text-lg font-semibold py-4 px-10 rounded-full shadow-lg transition-transform duration-200 hover:scale-105"
         >
-          Start Matching Now
+          Find My Person →
         </a>
       </div>
     </main>
